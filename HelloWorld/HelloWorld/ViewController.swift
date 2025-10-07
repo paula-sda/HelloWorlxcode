@@ -9,10 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imgPrincipal: UIImageView!
+    @IBOutlet weak var felicitacion: UILabel!
+    @IBOutlet weak var imagen2: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = "Hellow world"
+        self.title = "Felicitación cumple"
+        felicitacion.text = "HAPPY BIRTHDAY !!!"
+        
     }
 }
 

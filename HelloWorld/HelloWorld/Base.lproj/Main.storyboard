@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,19 +15,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAc-gk-BQN">
-                                <rect key="frame" x="76" y="224" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LABEL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTt-Ck-zxN">
+                                <rect key="frame" x="74" y="538" width="245" height="57"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="23"/>
+                                <color key="textColor" red="0.0070138396574987993" green="0.47520504756047138" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ff22081c9bec86b6756615c287677be9" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-T1-5dF">
+                                <rect key="frame" x="200" y="605" width="147" height="149"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="6851892" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-O7-B60">
+                                <rect key="frame" x="46" y="172" width="301" height="366"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.93025346017306365" blue="0.50330258198083833" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="oNg-O7-B60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6RJ-BU-LlJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="VTt-Ck-zxN" secondAttribute="bottom" constant="189" id="8hU-yJ-oEt"/>
+                            <constraint firstItem="TZK-T1-5dF" firstAttribute="top" secondItem="VTt-Ck-zxN" secondAttribute="bottom" constant="10" id="Dc8-GF-Axc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oNg-O7-B60" secondAttribute="bottom" constant="246" id="DsI-Yr-4xE"/>
+                            <constraint firstItem="TZK-T1-5dF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="200" id="Fqx-eW-orI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VTt-Ck-zxN" secondAttribute="trailing" constant="74" id="HxJ-Td-NVh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oNg-O7-B60" secondAttribute="trailing" constant="46" id="Mne-9q-s20"/>
+                            <constraint firstItem="oNg-O7-B60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="Qcu-VJ-vc2"/>
+                            <constraint firstItem="TZK-T1-5dF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-30" id="SEM-jg-fAg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TZK-T1-5dF" secondAttribute="trailing" constant="46" id="XfI-8u-FRx"/>
+                            <constraint firstItem="VTt-Ck-zxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="hDM-Qa-9YB"/>
+                            <constraint firstItem="VTt-Ck-zxN" firstAttribute="top" secondItem="oNg-O7-B60" secondAttribute="bottom" id="zuX-BA-9a1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vvH-Fe-RlV"/>
+                    <connections>
+                        <outlet property="felicitacion" destination="VTt-Ck-zxN" id="79c-Ln-Kui"/>
+                        <outlet property="imagen2" destination="TZK-T1-5dF" id="R5G-un-Jqk"/>
+                        <outlet property="imgPrincipal" destination="oNg-O7-B60" id="wXJ-Ro-D7s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="104"/>
+            <point key="canvasLocation" x="942.74809160305335" y="103.52112676056339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fZ4-88-EvB">
@@ -38,7 +64,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvx-rs-gb2" colorLabel="IBBuiltInLabel-Purple">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -52,11 +77,7 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="6851892" width="512" height="512"/>
+        <image name="ff22081c9bec86b6756615c287677be9" width="962" height="1024"/>
     </resources>
 </document>
