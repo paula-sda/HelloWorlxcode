@@ -38,9 +38,17 @@ class TableViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-            cell.textLabel?.text = self.shopItems[indexPath.row]
+            let cellIdentifier = "Cell"
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ShopItemTableViewCell else {
+                return UITableViewCell()
+            }
+            
+            cell.texto.text = self.shopItems[indexPath.row]
             return cell
+            //codigo de antes
+            /*let cell = table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            cell.textLabel?.text = self.shopItems[indexPath.row]
+            return cell*/
             
         }
         
@@ -51,6 +59,10 @@ class TableViewController: UIViewController {
             performSegue(withIdentifier: "showDetailSegue", sender: shopItems[indexPath.row])
             
             
+        }
+        
+       func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+            return UITableView.automaticDimension
         }
         
     }
