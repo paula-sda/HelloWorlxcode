@@ -10,25 +10,29 @@ import UIKit
 class ViewController: UIViewController {
     
     let BirthdaySegue = "showCumpleSegue"
+    let HelloSegue = "showEscribirNombreSegue"
     
-
+    
     @IBAction func clickCumple(_ sender: UIButton) {
         print("ver tarjeta cumple")
         self.performSegue(withIdentifier: BirthdaySegue, sender: self)
     }
     
+    @IBAction func clickHellowWorld(_ sender: UIButton) {
+        
+        print("ver tarjeta cumple")
+        self.performSegue(withIdentifier: HelloSegue, sender: self)
+        
+    }
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == BirthdaySegue {
             let destinationVC = segue.destination as! birthdayViewController
+        }*/
         
-        }
-       
     }
-
     
-    
-}
 

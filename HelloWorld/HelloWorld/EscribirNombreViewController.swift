@@ -8,22 +8,32 @@
 import UIKit
 
 class EscribirNombreViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    let HelloWorldSegue = "showHelloWorld"
+    
+    @IBOutlet weak var texto: UILabel!
+    
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBAction func clickdone(_ sender: UIButton) {
+        print("ver tarjeta cumple")
+        self.performSegue(withIdentifier: HelloWorldSegue, sender: self)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        username.placeholder = "Type your name here..."
+        texto.text = "Hellow, type your name below"
+        
     }
-    */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == HelloWorldSegue {
+            let destinationVC = segue.destination as! HelloWorldViewController
+        }
+        
+        
+    }
 }
