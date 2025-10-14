@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     let BirthdaySegue = "showCumpleSegue"
     let HelloSegue = "showEscribirNombreSegue"
-    
+    let ShopListSegue = "showTable"
     
     @IBAction func clickCumple(_ sender: UIButton) {
         print("ver tarjeta cumple")
@@ -20,9 +20,13 @@ class ViewController: UIViewController {
     
     @IBAction func clickHellowWorld(_ sender: UIButton) {
         
-        print("ver tarjeta cumple")
+        print("ver Hellow world")
         self.performSegue(withIdentifier: HelloSegue, sender: self)
         
+    }
+    @IBAction func clickShopList(_ sender: UIButton) {
+        print("ver Shop list")
+        self.performSegue(withIdentifier: ShopListSegue, sender: self)
     }
     
     // MARK: - Navigation
