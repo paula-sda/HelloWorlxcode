@@ -8,11 +8,12 @@
 import UIKit
 
 class InfoListViewController: UIViewController {
-    var itemName: String?
+    //var itemName: String?
+    var item: ShopItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = itemName ?? "Sin nombre"
+        self.title = item?.name ?? "Sin nombre"
         
     }
     
