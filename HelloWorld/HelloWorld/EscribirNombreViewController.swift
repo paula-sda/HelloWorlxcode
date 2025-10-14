@@ -12,13 +12,17 @@ class EscribirNombreViewController: UIViewController {
     let HelloWorldSegue = "showHelloWorld"
     
     @IBOutlet weak var texto: UILabel!
-    
-    
+
     @IBOutlet weak var username: UITextField!
     
     @IBAction func clickdone(_ sender: UIButton) {
-        print("ver tarjeta cumple")
-        self.performSegue(withIdentifier: HelloWorldSegue, sender: self)
+        if username.text!.isEmpty{
+            let alert = UIAlertController(title: "Error", message: "Debes escribir un nombre", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else{print("ver tarjeta cumple")
+            self.performSegue(withIdentifier: HelloWorldSegue, sender: self)
+        }
     }
     
     
@@ -32,8 +36,9 @@ class EscribirNombreViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == HelloWorldSegue {
             let destinationVC = segue.destination as! HelloWorldViewController
+            destinationVC.username = username.text ?? ""
+            
         }
-        
         
     }
 }

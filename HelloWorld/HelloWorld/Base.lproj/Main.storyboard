@@ -63,8 +63,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-r8-trP">
-                                <rect key="frame" x="51" y="208" width="216" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RkN-r8-trP">
+                                <rect key="frame" x="51" y="208" width="278" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -106,6 +106,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="k9b-8O-1h7"/>
                     <connections>
+                        <outlet property="texto" destination="RkN-r8-trP" id="sJG-qH-ajw"/>
                         <outlet property="username" destination="JGj-vF-tfH" id="ihX-qw-hzw"/>
                         <segue destination="Rob-Q7-wrg" kind="show" identifier="showHelloWorld" id="ZVS-Se-Whc"/>
                     </connections>
@@ -122,7 +123,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz8-VT-hsx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fz8-VT-hsx">
                                 <rect key="frame" x="88" y="227" width="216" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -148,6 +149,7 @@
                     <navigationItem key="navigationItem" id="EgS-Ic-Lfj"/>
                     <connections>
                         <outlet property="img1" destination="vzG-N1-Hex" id="x3W-oM-LmP"/>
+                        <outlet property="texto" destination="Fz8-VT-hsx" id="DNc-Ir-vzf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcQ-X0-tB5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

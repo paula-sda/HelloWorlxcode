@@ -8,15 +8,15 @@
 import UIKit
 
 class HelloWorldViewController: UIViewController {
+    var username: String = ""
     
     @IBOutlet weak var texto: UILabel!
     @IBOutlet weak var img1: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        texto.text = "Hello + username.text + Welcome to my app"
+        texto.text = "Hello \(username), Welcome to my app"
 
-        // Do any additional setup after loading the view.
     }
     
 
