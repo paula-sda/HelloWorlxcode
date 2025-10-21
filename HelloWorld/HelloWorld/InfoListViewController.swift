@@ -10,13 +10,23 @@ import UIKit
 class InfoListViewController: UIViewController {
     //var itemName: String?
     var item: ShopItem?
-
+    @IBOutlet weak var cantidad: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = item?.name ?? "Sin nombre"
         
+        // Mostrar la cantidad solo si es mayor a 0
+        if let quantity = item?.quantity, quantity > 0 {
+            cantidad.text = "Cantidad: \(quantity)"
+            cantidad.isHidden = false
+        } else {
+            cantidad.isHidden = true
+        }
+        
     }
     
+        
 
     /*
     // MARK: - Navigation

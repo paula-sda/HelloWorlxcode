@@ -10,11 +10,26 @@ struct ShopItem {
     let name: String
     var quantity: Int
 }
+
+extension TableViewController: AddShopItemDelegate {
+    func addShopItem(item: ShopItem) {
+        // 1️⃣ Agrega el nuevo ítem al array
+        shopItems.append(item)
+        
+        // 2️⃣ Recarga la tabla para mostrarlo
+        table.reloadData()
+    }
+}
+
 class TableViewController: UIViewController {
     
     let DetailSegue = "showDetailSegue"
+    let AddSegue = "showNewItems"
+
     var shopItems = [ShopItem]()
     var selectedItem: ShopItem? = nil
+    //add
+    var addBarBt: UIBarButtonItem?
     
     @IBOutlet weak var table: UITableView!
     
@@ -24,6 +39,15 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
       shopItems = getShopItems()
         // Do any additional setup after loading the view.
+        //add
+        self.addBarBt = UIBarButtonItem.init(title: String("Add"), style: .plain, target: self, action: #selector(self.addBarBtAction))
+        self.navigationItem.rightBarButtonItem = self.addBarBt
+    }
+    //add
+    @IBAction func addBarBtAction(sender: UIBarButtonItem) {
+        print("add clicked")
+        self.performSegue(withIdentifier: AddSegue, sender: nil)
+        
     }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -34,13 +58,28 @@ class TableViewController: UIViewController {
     }
 }*/
     // Preparamos el segue para pasar el ShopItem al siguiente controlador
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == DetailSegue {
-                if let destinationVC = segue.destination as? InfoListViewController{
-                   destinationVC.item = self.selectedItem
-                }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == DetailSegue {
+            if let destinationVC = segue.destination as? InfoListViewController {
+                destinationVC.item = self.selectedItem
+            }
+        } else if segue.identifier == AddSegue {
+            // Si el modal está directo
+            if let addVC = segue.destination as? NewITemsViewController {
+                addVC.delegate = self
+            }
+            // Si el modal está embebido en un NavigationController
+            else if let nav = segue.destination as? UINavigationController,
+                      let addVC = nav.viewControllers.first as? NewITemsViewController {
+                addVC.delegate = self
             }
         }
+    }
+
+    
+    
+    
     }
 
     
