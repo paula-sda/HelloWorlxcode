@@ -72,9 +72,13 @@ class TableViewController: UIViewController {
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-                let cell = table.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ShopItemTableViewCell else {
+                    return UITableViewCell()
+                }
+                
                 let item = shopItems[indexPath.row]
-                cell.textLabel?.text = "\(item.name) - Qty: \(item.quantity)"
+                cell.texto.text = "\(item.name) - Qty: \(item.quantity)"
+                
                 return cell
             }
             
