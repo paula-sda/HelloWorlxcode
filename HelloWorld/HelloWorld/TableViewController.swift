@@ -13,10 +13,10 @@ struct ShopItem {
 
 extension TableViewController: AddShopItemDelegate {
     func addShopItem(item: ShopItem) {
-        // 1️⃣ Agrega el nuevo ítem al array
+        // Agrega el nuevo ítem al array
         shopItems.append(item)
         
-        // 2️⃣ Recarga la tabla para mostrarlo
+        // Recarga la tabla para mostrarlo
         table.reloadData()
     }
 }
