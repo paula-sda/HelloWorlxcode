@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Post: Codable {
+    nonisolated struct Post: Codable {
     let userId: Int
     let id: Int
     let title: String

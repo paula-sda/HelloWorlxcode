@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F0C5A332EA7E488008A3A68 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0C5A322EA7E488008A3A68 /* Alamofire */; };
-		3F0C5A352EA7E488008A3A68 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 3F0C5A342EA7E488008A3A68 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +41,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0C5A332EA7E488008A3A68 /* Alamofire in Frameworks */,
-				3F0C5A352EA7E488008A3A68 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +84,6 @@
 			name = HelloWorld;
 			packageProductDependencies = (
 				3F0C5A322EA7E488008A3A68 /* Alamofire */,
-				3F0C5A342EA7E488008A3A68 /* AlamofireDynamic */,
 			);
 			productName = HelloWorld;
 			productReference = 3FBCA2802E8C31830036903A /* HelloWorld.app */;
@@ -372,11 +369,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3F0C5A312EA7E488008A3A68 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		3F0C5A342EA7E488008A3A68 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3F0C5A312EA7E488008A3A68 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

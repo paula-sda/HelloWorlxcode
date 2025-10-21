@@ -14,7 +14,7 @@ class PostsDataSource{
         let url = "https://jsonplaceholder.typicode.com/posts/\(id)"
         
         AF.request(url).responseDecodable(of: Post.self) { response in
-            // aquí puedes manejar response.result si quieres
+            
         }
         
     }
