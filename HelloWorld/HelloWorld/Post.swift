@@ -13,3 +13,4 @@ import Foundation
     let title: String
     let body: String
 }
+

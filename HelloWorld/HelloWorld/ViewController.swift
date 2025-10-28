@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     let BirthdaySegue = "showCumpleSegue"
     let HelloSegue = "showEscribirNombreSegue"
     let ShopListSegue = "showTable"
+    let NetworkSegue = "NetworkCall"
     
     @IBAction func clickCumple(_ sender: UIButton) {
         print("ver tarjeta cumple")
@@ -29,6 +30,11 @@ class ViewController: UIViewController {
         self.performSegue(withIdentifier: ShopListSegue, sender: self)
     }
     
+    @IBAction func AbrirNetwork(_ sender: UIButton) {
+        print("ver network call")
+        self.performSegue(withIdentifier: NetworkSegue, sender: self)
+        
+    }
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
