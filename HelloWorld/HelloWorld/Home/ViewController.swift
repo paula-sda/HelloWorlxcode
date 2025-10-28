@@ -1,0 +1,48 @@
+//
+//  ViewController.swift
+//  HelloWorld
+//
+//  Created by Student on 30/9/25.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    let BirthdaySegue = "showCumpleSegue"
+    let HelloSegue = "showEscribirNombreSegue"
+    let ShopListSegue = "showTable"
+    let NetworkSegue = "NetworkCall"
+    
+    @IBAction func clickCumple(_ sender: UIButton) {
+        print("ver tarjeta cumple")
+        self.performSegue(withIdentifier: BirthdaySegue, sender: self)
+    }
+    
+    @IBAction func clickHellowWorld(_ sender: UIButton) {
+        
+        print("ver Hellow world")
+        self.performSegue(withIdentifier: HelloSegue, sender: self)
+        
+    }
+    @IBAction func clickShopList(_ sender: UIButton) {
+        print("ver Shop list")
+        self.performSegue(withIdentifier: ShopListSegue, sender: self)
+    }
+    
+    @IBAction func AbrirNetwork(_ sender: UIButton) {
+        print("ver network call")
+        self.performSegue(withIdentifier: NetworkSegue, sender: self)
+        
+    }
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == BirthdaySegue {
+            let destinationVC = segue.destination as! birthdayViewController
+        }*/
+        
+    }
+    
+
