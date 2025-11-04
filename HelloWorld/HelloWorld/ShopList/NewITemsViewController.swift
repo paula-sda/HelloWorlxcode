@@ -31,8 +31,13 @@ class NewITemsViewController: UIViewController {
             guard let name = nameItem.text, !name.isEmpty,
                   let quantity = cantidadItem.text, let quantity = Int(quantity) else {
                 // Si algo falla, puedes mostrar un alert o simplemente salir
-                print(String(localized: "alerta"))
-                return
+                let alert = UIAlertController(title: "Error",
+                                                      message: "Debes introducir un nombre y una cantidad válida",
+                                                      preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
+                        return
+
             }
         //Aquí creas el nuevo ShopItem con los datos del usuario
                 let newItem = ShopItem(name: name, quantity: quantity)
